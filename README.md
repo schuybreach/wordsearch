@@ -1,6 +1,6 @@
 # wordsearch
 Wordle Wordsearch Tool
-(c) Schuyler Meyer /\\ SchuyTyr
+(c) Schuyler Meyer /\\\ SchuyTyr
 
 Created in early 2022.
 
