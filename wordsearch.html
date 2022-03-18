@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Schuyler Meyer Website 2.0 -->
+<html lang="en-US">
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMYCWX2SRC"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-YMYCWX2SRC');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Schuyler Meyer /\\ SchuyTyr Media &mdash; Photography, Design, Game Developer, VR, Software Engineering, Animation">
+	<meta name="keywords" content="wordsearch,word search,wordle,scrabble,word finder,NYT,Schuyler Meyer,Schuyler,Meyer,Skyler,SchuyTyr,Developer">
+	<meta name="author" content="Schuyler Meyer">
+	<title>SM &ndash; Wordsearch</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index,follow">
+	<link rel="preconnect" href="https://www.schuylermeyer.com" crossorigin>
+	<link href="stylesSM.css" rel="stylesheet">
+	<link href="stylesSM2.css" rel="stylesheet">
+	<link href="src/icons/SMLogo2022.ico" rel="shortcut icon">
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Merienda&family=Orbitron&display=swap" rel="stylesheet">
+	<!-- End Fonts -->
+	<script src="src/js/footer-main.js" type="text/javascript" defer></script>
+</head>
+<body>
+	<header>
+		<h1 title="Schuyler Meyer">
+			<a href="https://www.schuylermeyer.com">
+				<img alt="Schuyler Meyer" class="imgLogo" src="src/img/SMSignLogo2021.png">
+			</a>
+		</h1>
+		<hr class="rounded">
+
+	</header>
+
+	<!-- __________________________________________________________________________ -->
+
+	<main>
+		<button id="myBtn" onclick="topFunction()" title="Go to the top"><span>&uarr;</span></button>
+		<h3>
+			Wordsearch
+		</h3>
+		<p class="pText">
+			This is a tool to search for five letter words! (Primarily for use with
+			<a class="link3" href="https://www.nytimes.com/games/wordle/index.html" target="_blank">Wordle</a>).
+
+		</p>
+
+		<div id="ws-main">
+			<div class="pText">
+				<u><a class="point" onclick="hiddenTextFunc()">Directions (click to expand)</a></u>:
+				<p class="pTextH" id="hiddenText" style="display:none;">
+					Type any single letter you know in the top five <span style="color:#3870ff">blue</span> boxes.
+					If you don't know the letter, place a * (asterisk / star) in its place. For letters you know
+					are included, but you don't know where, put them in the bottom left <span style="color:#00e000">green</span> box.
+					And letters that you know are not in the word, in the bottom right <span style="color:#ff3b14">red</span> box.
+					Press "search" to search and "reset" to clear the form.
+				</p>
+			</div>
+			<div class="ws-input">
+					<input id="textbox1" class="inputs" type="text" maxLength="1" placeholder="a" title="First Letter">
+					<input id="textbox2" class="inputs" type="text" maxLength="1" placeholder="b" title="Second Letter">
+					<input id="textbox3" class="inputs" type="text" maxLength="1" placeholder="c" title="Third Letter">
+					<input id="textbox4" class="inputs" type="text" maxLength="1" placeholder="d" title="Fourth Letter">
+					<input id="textbox5" class="inputs" type="text" maxLength="1" placeholder="e" title="Fifth Letter">
+					<br>
+					<input id="textbox6" class="inputs" type="text" maxLength="5" placeholder="include" title="Letters to Include">
+					<input id="textbox7" class="inputs" type="text" maxLength="21" placeholder="exclude" title="Letters to Exclude">
+					<br>
+					<div style="text-align:center">
+						<input id="submit" type="button" value="Search" title="Search"> <!-- Go!!! -->
+						<input id="reset" type="button" value="Reset" title="Reset"> <!-- reset -->
+					</div>
+					<br>
+			</div>
+
+			<hr class="rounded">
+
+			<div id="ws-output">
+				<div><u>Results:</u></div>
+				<br>
+				<div id="output"></div>
+				<div id="loading"></div>
+				<br>
+			</div>
+		</div>
+
+
+		<p class="pText">
+			<u>Please Note</u>: The less information you input, the longer it will take to process, please be patient.
+			<br><br>
+			If it takes more than 30 seconds, try hitting the "search" button again.
+			<br><br>
+			<!--<u>Known Bugs</u>: Currently searching...
+			<br><br>-->
+			For words that are not five letters, that functionality is still in research
+			and development. Do note that this search will not work on Internet Explorer due to a few
+			"newer features".
+			<!--but if you are casual internet browser and are still using
+			Internet Explorer in this day and age, I'd suggest switching to another one, such as Firefox or Chrome.-->
+		</p>
+		<br>
+		<hr class="rounded">
+		<p class="pText" style="text-align: center">
+			<br>
+			&mdash;&nbsp;Errors? Bugs? Questions? Comments?&nbsp;&mdash;
+			<br>Message me on any of the social media below or email me at
+			<a class="link3" href="mailto:schuybreach@gamil.com">schuybreach@gmail.com</a>.
+		</p>
+
+	</main>
+
+
+	<!-- __________________________________________________________________________ -->
+
+	<div id="footer-main"></div>
+
+	<script src="src/js/wordsearch-flat.js"></script>
+	<script src="hideText.js"></script>
+	<script src="scrollToTop.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script>
+
+		var place = this.placeholder;
+
+		$(".inputs").focus(function () {
+			place = this.placeholder;
+			if ($(this).is(':focus')){
+				this.placeholder = '';
+			}
+		});
+		$(".inputs").blur(function () {
+			if (!($(this).is(':focus'))){
+				this.placeholder = place;
+			}
+		});
+
+		$(".inputs").keyup(function () {
+			if (this.value.length === this.maxLength) {
+				var $next = $(this).next('.inputs');
+
+				if(this.id === 'textbox5'){
+				/*if($next.length === 0){*/
+					$('.inputs').siblings('.inputs').prev('.inputs').focus();
+				}
+				else if ($next.length){
+						$(this).next('.inputs').focus();
+				}
+				else {
+						$(this).blur();
+				}
+			}
+		});
+	</script>
+
+</body>
+</html>
